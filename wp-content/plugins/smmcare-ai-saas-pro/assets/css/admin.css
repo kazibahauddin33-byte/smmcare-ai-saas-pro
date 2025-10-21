@@ -1,0 +1,674 @@
+/**
+ * Admin Styles for SMMCare AI SaaS Pro
+ *
+ * @package SMMCARE_AI_SaaS_Pro
+ */
+
+/* ========================================
+   General Admin Styles
+   ======================================== */
+
+.smmcare-welcome-wrap,
+.smmcare-dashboard-wrap,
+.smmcare-documentation-wrap,
+.smmcare-getting-started-wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* ========================================
+   Onboarding Container
+   ======================================== */
+
+.smmcare-onboarding-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 20px;
+}
+
+/* ========================================
+   Progress Bar
+   ======================================== */
+
+.smmcare-progress-bar {
+    margin-bottom: 40px;
+}
+
+.smmcare-progress-bar-track {
+    height: 8px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.smmcare-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2271b1, #0d5e9d);
+    transition: width 0.3s ease;
+}
+
+.smmcare-progress-text {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ========================================
+   Step Content
+   ======================================== */
+
+.smmcare-step-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.smmcare-step-header h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: #1d2327;
+}
+
+.smmcare-step-header .description {
+    font-size: 16px;
+    color: #666;
+}
+
+.smmcare-step-body {
+    min-height: 300px;
+    margin-bottom: 40px;
+}
+
+.smmcare-step-actions {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.smmcare-step-actions .button {
+    margin: 0 10px;
+}
+
+/* ========================================
+   Steps Navigation
+   ======================================== */
+
+.smmcare-steps-navigation {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.smmcare-steps-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.smmcare-step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px 15px;
+    opacity: 0.5;
+}
+
+.smmcare-step-item.current {
+    opacity: 1;
+}
+
+.smmcare-step-item.completed {
+    opacity: 1;
+}
+
+.smmcare-step-item .step-number {
+    width: 40px;
+    height: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.smmcare-step-item.current .step-number {
+    background: #2271b1;
+    color: #fff;
+}
+
+.smmcare-step-item.completed .step-number {
+    background: #00a32a;
+    color: #fff;
+}
+
+.smmcare-step-item .step-title {
+    font-size: 12px;
+    color: #666;
+}
+
+.smmcare-step-item .step-status {
+    color: #00a32a;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ========================================
+   Completion Screen
+   ======================================== */
+
+.smmcare-onboarding-complete {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.smmcare-completion-icon {
+    width: 100px;
+    height: 100px;
+    background: #00a32a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+    margin: 0 auto 30px;
+}
+
+.smmcare-onboarding-complete h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.smmcare-completion-actions {
+    margin-top: 30px;
+}
+
+.smmcare-completion-actions .button {
+    margin: 0 10px;
+}
+
+/* ========================================
+   Welcome Step
+   ======================================== */
+
+.smmcare-welcome-step .welcome-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.smmcare-welcome-step .welcome-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.smmcare-welcome-step .lead {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.smmcare-welcome-step .welcome-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.smmcare-welcome-step .feature-item {
+    text-align: center;
+}
+
+.smmcare-welcome-step .feature-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.smmcare-welcome-step .feature-item h4 {
+    margin: 0 0 10px;
+}
+
+.smmcare-welcome-step .feature-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ========================================
+   Connect Accounts Step
+   ======================================== */
+
+.social-platforms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.platform-card {
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.platform-card:hover {
+    border-color: #2271b1;
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+    color: #fff;
+}
+
+.facebook-icon {
+    background: #1877f2;
+}
+
+.twitter-icon {
+    background: #000;
+}
+
+.instagram-icon {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.linkedin-icon {
+    background: #0a66c2;
+}
+
+.platform-card h4 {
+    margin: 0 0 10px;
+}
+
+.platform-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   AI Setup Step
+   ======================================== */
+
+.tone-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.tone-option {
+    flex: 1;
+    min-width: 120px;
+}
+
+.tone-option input[type="radio"] {
+    display: none;
+}
+
+.tone-option span {
+    display: block;
+    padding: 12px 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tone-option input[type="radio"]:checked + span {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.feature-checkbox {
+    display: block;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.feature-checkbox:hover {
+    background: #f9f9f9;
+}
+
+.feature-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.feature-desc {
+    display: block;
+    margin-left: 28px;
+    color: #666;
+    font-size: 13px;
+}
+
+/* ========================================
+   Help Section
+   ======================================== */
+
+.smmcare-help-section {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.smmcare-help-section h3 {
+    margin-top: 0;
+}
+
+.smmcare-help-section .button {
+    margin: 0 5px;
+}
+
+/* ========================================
+   Dashboard Styles
+   ======================================== */
+
+.smmcare-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.smmcare-dashboard-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.smmcare-dashboard-card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.smmcare-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2271b1;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.smmcare-quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.smmcare-quick-actions .button {
+    justify-content: center;
+}
+
+.smmcare-resources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.smmcare-resources-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.smmcare-resources-list li:last-child {
+    border-bottom: none;
+}
+
+/* ========================================
+   Documentation Styles
+   ======================================== */
+
+.smmcare-documentation-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.smmcare-doc-sidebar {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    position: sticky;
+    top: 32px;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+}
+
+.smmcare-doc-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.smmcare-doc-nav li {
+    margin-bottom: 5px;
+}
+
+.smmcare-doc-nav a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #2271b1;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.smmcare-doc-nav a:hover {
+    background: #f0f6fc;
+}
+
+.smmcare-doc-main {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+}
+
+.smmcare-doc-section {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.smmcare-doc-section:last-child {
+    border-bottom: none;
+}
+
+.smmcare-doc-highlight {
+    background: #f0f6fc;
+    border-left: 4px solid #2271b1;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.smmcare-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.smmcare-feature-item {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+/* ========================================
+   Getting Started Styles
+   ======================================== */
+
+.smmcare-getting-started-content {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.smmcare-intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lead {
+    font-size: 18px;
+    color: #666;
+}
+
+.smmcare-guide-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.smmcare-guide-step:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #2271b1;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h2 {
+    margin-top: 0;
+}
+
+.tips-grid,
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.tip-card,
+.resource-card {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.tip-card h3,
+.resource-card h3 {
+    margin-top: 0;
+    color: #2271b1;
+}
+
+/* ========================================
+   Form Styles
+   ======================================== */
+
+.smmcare-setup-form,
+.smmcare-ai-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group .description {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.regular-text {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+    .smmcare-documentation-content {
+        grid-template-columns: 1fr;
+    }
+
+    .smmcare-doc-sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .smmcare-guide-step {
+        flex-direction: column;
+    }
+
+    .smmcare-steps-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-platforms {
+        grid-template-columns: 1fr;
+    }
+}
