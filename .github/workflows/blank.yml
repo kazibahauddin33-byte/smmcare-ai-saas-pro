@@ -1,0 +1,59 @@
+name: Build plugin ZIP (with vendor)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP 8.1
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, openssl, json
+          coverage: none
+
+      - name: Validate plugin folder exists
+        run: |
+          PLUGIN_DIR="wp-content/plugins/smmcare-ai-saas-pro"
+          if [ ! -d "$PLUGIN_DIR" ]; then
+            echo "ERROR: Plugin folder $PLUGIN_DIR not found in repo. Make sure plugin files are in that path." >&2
+            exit 1
+          fi
+
+      - name: Install composer (in plugin) and dependencies
+        working-directory: wp-content/plugins/smmcare-ai-saas-pro
+        run: |
+          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+          php composer-setup.php --install-dir=/usr/local/bin --filename=composer || true
+          composer --version
+          composer install --no-dev --prefer-dist --optimize-autoloader
+        env:
+          COMPOSER_ALLOW_SUPERUSER: "1"
+
+      - name: Create ZIP with vendor included
+        run: |
+          PLUGIN_DIR="wp-content/plugins/smmcare-ai-saas-pro"
+          OUT_NAME="smmcare-ai-saas-pro-with-vendor.zip"
+          PARENT="$(dirname "$PLUGIN_DIR")"
+          PLUGIN_BASENAME="$(basename "$PLUGIN_DIR")"
+          pushd "$PARENT"
+          zip -r "$OUT_NAME" "$PLUGIN_BASENAME" -x "**/.git/**" -x "**/tests/**" -x "**/.github/**"
+          popd
+          echo "ZIP created at: $PARENT/$OUT_NAME"
+          ls -lh "$PARENT/$OUT_NAME" || true
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: smmcare-ai-saas-pro-with-vendor
+          path: wp-content/plugins/smmcare-ai-saas-pro/../smmcare-ai-saas-pro-with-vendor.zip
+        

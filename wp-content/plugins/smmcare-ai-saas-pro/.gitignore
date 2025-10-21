@@ -1,0 +1,28 @@
+# Composer
+/vendor/
+composer.lock
+composer.phar
+
+# Node modules (if any)
+node_modules/
+package-lock.json
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Build files
+*.zip
+dist/
+
+# Temporary files
+*.tmp
+*.log
+.cache/
+
+# WordPress
+wp-config.php
+.htaccess
